@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="3D Human Scan With A Moving Event Camera">
+    <meta name="keywords" content="Event Cameras, Human Mesh Recovery, Human Pose Estimation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3D Human Scan With A Moving Event Camera</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!--script async src="https://www.googletagmanager.com/gtag/js?id="></script-->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      //gtag('config', 'G-PYVRSFMDRL');
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">3D Human Scan With A Moving Event Camera</h1>
+              <div class="is-size-1 my-publication-venue">CVPR 2024 Workshop on CV4MR</div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                <a href="">Kai Kohyama</a><sup>1</sup>,</span>
+                <span class="author-block">
+                <a href="http://shibashintaro.com">Shintaro Shiba</a><sup>1</sup>,</span>
+                <span class="author-block">
+                <a href="https://aoki-medialab.jp">Yoshimitsu Aoki</a><sup>1</sup>,</span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Keio University Japan</span>
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+
+                  <!-- PDF Link. -->
+                  <!--
+                  <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2312.03799.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                  <span>Paper</span>
+                  </a>
+                  </span>
+                  -->
+                  <span class="link-block">
+                  <a href="https://arxiv.org/abs/2404.08504" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                  <span>arXiv</span>
+                  </a>
+                  </span>
+
+                  <!-- Video Link. TODO -->
+                  <!-- <span class="link-block">
+                  <a href="https://youtu.be/o79wbZh0gU4" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                  <span>Video</span>
+                  </a>
+                  </span> -->
+                  
+                  <!-- Code Link. -->
+                  <!--
+                  <span class="link-block">
+                  <a href="https://github.com" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                  <span>Code (Coming soon)</span>
+                  </a>
+                  </span>
+                 -->
+                  <!-- Dataset Link. -->
+                  <!-- <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1VoKEg6CSITmPH27R19tGzyzbUIrmhRDV?usp=sharing" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                  <span>Data</span>
+                  </a> -->
+                  <!-- </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <img src="./static/images/proposal_method_for_page.png">
+          </div>
+        </div>
+        <!-- Teaser image. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <img src="./static/images/diagram_for_page.png">
+          </div>
+        </div> <!--/ Teaser image. -->
+
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Capturing a 3D human body is one of the important tasks in computer vision with a wide range of 
+                applications such as virtual reality and sports analysis. However, conventional frame cameras are 
+                limited by their temporal resolution and dynamic range, which imposes constraints in real-world 
+                application setups. Event cameras have the advantages of high temporal resolution and high 
+                dynamic range (HDR), but the development of event-based methods is necessary to handle data with 
+                different characteristics. This paper proposes a novel event-based method for 3D pose estimation 
+                and human mesh recovery. Prior work on event-based human mesh recovery require frames (images) 
+                as well as event data. The proposed method solely relies on events; it carves 3D voxels by moving
+                 the event camera around a stationary body, reconstructs the human pose and mesh by attenuated 
+                 rays, and fit statistical body models, preserving high-frequency details. The experimental results
+                  show that the proposed method outperforms conventional frame-based methods in the estimation 
+                  accuracy of both pose and body mesh. We also demonstrate results in challenging situations where 
+                  a conventional camera has motion blur. This is the first to demonstrate event-only human mesh 
+                  recovery, and we hope that it is the first step toward achieving robust and accurate 3D human 
+                  body scanning from vision sensors.
+            </div>
+          </div>
+        </div> <!--/ Abstract. -->
+
+         <!-- Paper video. -->
+         <!-- <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/o79wbZh0gU4?si=ua1CfydQxP3AAPty" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div> / Paper video. -->
+
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a class="icon-link" href="https://arxiv.org/abs/2404.08504">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <!-- <a class="icon-link" href="https://github.com">
+            <i class="fab fa-github"></i>
+          </a> -->
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+              <p>
+                We thank the authors of <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> that kindly
+                open sourced the template of this website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
